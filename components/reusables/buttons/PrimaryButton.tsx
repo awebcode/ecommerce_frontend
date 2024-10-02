@@ -35,7 +35,7 @@ const PrimaryButton: FC<ButtonProps> = ({
           <motion.button
             {...animations}
             className={cn(
-              `className="flex items-center gap-2 bg-primary text-black px-4 md:px-8 py-[6px] md:py-2 rounded-2xl font-medium shadow-lg hover:bg-yellow-600 transition"`,
+              `flex items-center gap-2 bg-primary text-white px-4 md:px-6 py-2 md:py-3  rounded-xl font-medium shadow-lg hover:bg-yellow-600 transition"`,
               className
             )}
             onClick={onClick}
