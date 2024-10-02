@@ -1,6 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/header/Header";
+import Navbar from "./_components/header/Header";
 import { generateSEO, generateViewport } from "@/config/seo/seo";
 import ScrollToTop from "../components/reusables/ScrollToTop";
 import { Toaster } from "@/components/ui/sonner";
