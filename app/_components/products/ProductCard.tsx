@@ -19,7 +19,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, tit
           <h3 className="text-sm md:text-lg  capitalize font-semibold text-neutral-600">
             {title}
           </h3>
-          {desc && <p className="">{desc?.slice(0, 25)+"..."}</p>}
+          {desc && (
+            <p className="text-gray-500">{desc?.slice(0, 25) + "..."}</p>
+          )}
         </div>
       )}
       {/* Product Image */}
@@ -38,7 +40,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, tit
           <h3 className="text-sm md:text-lg  capitalize font-semibold text-neutral-600">
             {title}
           </h3>
-          {desc && <p className="">{desc?.slice(0, 25)+"..."}</p>}
+          {desc && (
+            <p className="text-gray-500">{desc?.slice(0, 25) + "..."}</p>
+          )}
         </div>
       )}
 
