@@ -1,4 +1,4 @@
-import { products } from "@/app/data";
+import { products } from "@/app/_components/data";
 import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
 import React from "react";
@@ -25,7 +25,10 @@ const NewArrivalProducts = () => {
         >
           <CarouselContent className="md:p-4">
             {products.map((product) => (
-              <CarouselItem key={product.title} className="basis-1/2 md:basis-1/4 lg:basis-1/5">
+              <CarouselItem
+                key={product.title}
+                className="basis-1/2 md:basis-1/4 lg:basis-1/5"
+              >
                 <ProductCard
                   image={product.image}
                   title={product.title}

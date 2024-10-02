@@ -1,4 +1,4 @@
-import { products } from "@/app/data";
+import { products } from "@/app/_components/data";
 import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
 import React from "react";

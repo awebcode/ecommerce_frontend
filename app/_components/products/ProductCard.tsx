@@ -43,11 +43,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, tit
       )}
 
       {/* Product Title and Price */}
-      <div className="p-2 ">
+      {/* <div className="p-2 ">
         <p className="text-xs md:text-sm font-medium text-gray-600">
           ${price.toFixed(2)}
         </p>
-      </div>
+      </div> */}
 
       {/* Buttons Section */}
       <div className="p-2 flex justify-between items-center space-x-4">

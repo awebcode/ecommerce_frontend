@@ -1,4 +1,4 @@
-import { products } from "@/app/data";
+import { products } from "@/app/_components/data";
 import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
 import React from "react";
@@ -24,7 +24,7 @@ const TopSellingProducts = () => {
           className="w-full "
         >
           <CarouselContent className="p-4">
-            {products.slice(5,10).map((product) => (
+            {products.slice(5, 10).map((product) => (
               <CarouselItem
                 key={product.title}
                 className="basis-1/2 md:basis-1/4 lg:basis-1/5"

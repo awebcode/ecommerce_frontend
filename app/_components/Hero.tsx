@@ -1,10 +1,12 @@
-'use client';
+"use client";
 import Container from "@/components/reusables/contents/Container";
 import Img from "@/components/reusables/contents/elements/Img";
 import Wrapper from "@/components/reusables/contents/Wrapper";
 import React from "react";
 import { motion } from "framer-motion";
 import StyledParagrah from "@/components/reusables/contents/StyledParagrah";
+import PrimaryButton from "@/components/reusables/buttons/PrimaryButton";
+import { MoveUpRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -48,12 +50,8 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 1 }}
               className="flex space-x-4"
             >
-              <button className="bg-yellow-500 text-black px-6 py-3 rounded-full font-medium shadow-lg hover:bg-yellow-600 transition">
-                Read More &rarr;
-              </button>
-              <button className="border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-full font-medium hover:bg-yellow-600 hover:text-black transition">
-                BUY
-              </button>
+              <PrimaryButton iconRight={<MoveUpRight />}>Read More </PrimaryButton>
+              <PrimaryButton>BUY</PrimaryButton>
             </motion.div>
           </div>
 
@@ -64,7 +62,7 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="absolute right-32 bottom-0 h-40 w-40 bg-yellow-400 blur-[190px]"></div>
+            <div className="absolute right-32 bottom-0 h-40 w-40 bg-yellow-400 blur-[190px] md:blur-[100px]"></div>
             <Img src="/hero.svg" alt="hero" width={1000} height={1000} />
           </motion.div>
         </div>
