@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import customComponentsPlugin from "./public/styles/tw/custom-components";
 import customUtilitiesPlugin from "./public/styles/tw/custom-utility";
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "media",
   content: {
     files: [
       "./pages/**/*.{js,ts,jsx,tsx,mdx}",
