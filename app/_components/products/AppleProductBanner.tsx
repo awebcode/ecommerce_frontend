@@ -4,6 +4,7 @@ import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
 import Image from "next/image";
 import { MoveUpRight } from "lucide-react";
+import PrimaryButton from "@/components/reusables/buttons/PrimaryButton";
 
 const AppleProductBanner = () => {
   return (
@@ -30,12 +31,12 @@ const AppleProductBanner = () => {
               </p>
               {/* Buttons */}
               <div className="flex space-x-4 mt-2">
-                <button className="flex items-center space-x-2 bg-yellow-500 text-black px-6 py-3 rounded-full font-medium shadow-lg hover:bg-yellow-600 transition">
-                  Read More <MoveUpRight className="h-4 w-4" />
-                </button>
-                <button className="border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-full font-medium hover:bg-yellow-600 hover:text-black transition">
-                  BUY
-                </button>
+                <PrimaryButton
+                  iconRight={<MoveUpRight className="h-3 w-3 md:w-4 md:h-4" />}
+                >
+                  Read More{" "}
+                </PrimaryButton>
+                <PrimaryButton>BUY</PrimaryButton>
               </div>
             </div>
           </div>
@@ -60,12 +61,12 @@ const AppleProductBanner = () => {
               </p>
               {/* Buttons */}
               <div className="flex space-x-4 mt-2">
-                <button className="flex items-center space-x-2 bg-yellow-500 text-black px-6 py-3 rounded-full font-medium shadow-lg hover:bg-yellow-600 transition">
-                  Read More <MoveUpRight className="h-4 w-4" />
-                </button>
-                <button className="border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-full font-medium hover:bg-yellow-600 hover:text-black transition">
-                  BUY
-                </button>
+                <PrimaryButton
+                  iconRight={<MoveUpRight className="h-3 w-3 md:w-4 md:h-4" />}
+                >
+                  Read More{" "}
+                </PrimaryButton>
+                <PrimaryButton>BUY</PrimaryButton>
               </div>
             </div>
           </div>

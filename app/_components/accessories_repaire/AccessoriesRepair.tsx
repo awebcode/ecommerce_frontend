@@ -47,7 +47,7 @@ const AccessoriesRepairPage: React.FC = () => {
         {/* Accessories Repair Section */}
         <div className="flex-between">
           <TitleSubtitle title="Accessories Repair" subtitle="You can repair products" />
-          <Button variant="outline" className="text-gray-500 flex gap-2">Watch <MoveUpRight className=" h-4 w-4" /> </Button>
+          <Button variant="outline" className="text-gray-500 flex gap-2">Watch <MoveUpRight className="h-3 w-3 md:w-4 md:h-4"/>  </Button>
         </div>
         <div className="flex justify-center gap-4 flex-wrap">
           {ACCESSORIES_REPAIRS.map((repair) => (

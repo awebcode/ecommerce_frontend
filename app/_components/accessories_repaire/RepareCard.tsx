@@ -19,7 +19,7 @@ const RepairCard: React.FC<RepairCardProps> = ({ title, description, icon }) => 
       <h3 className="font-semibold text-xl text-gray-700">{title}</h3>
       <p className="text-gray-600 mt-2">{description}</p>
       <a href="#" className="float-right absolute right-4 bottom-4 mt-4 bg-gray-500 group-hover:bg-primary p-2 rounded-full text-white transition-all">
-        <MoveUpRight className=" w-5 h-5" />
+        <MoveUpRight className="h-3 w-3 md:w-4 md:h-4"/> 
       </a>
     </motion.div>
   );

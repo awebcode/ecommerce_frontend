@@ -1,7 +1,7 @@
 "use client";
+import PrimaryButton from "@/components/reusables/buttons/PrimaryButton";
 import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
 import { z } from "zod";
@@ -55,12 +55,7 @@ const SubscriptionPage: React.FC = () => {
               />
               {error && <span className="text-red-500 text-left">{error}</span>}
             </div>
-            <Button
-              type="submit"
-              className="h-auto px-4 md:px-8 py-4 bg-yellow-500 text-white rounded-md hover:bg-yellow-600"
-            >
-              Subscribe
-            </Button>
+            <PrimaryButton type="submit">Subscribe</PrimaryButton>
           </form>
         </div>
       </Container>
