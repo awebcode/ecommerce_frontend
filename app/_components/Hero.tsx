@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="flex  flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8 ">
           {/* Hero left (text) */}
           <div className="relative flex-1 text-left space-y-6">
-            <div className="absolute left-0 top-0 h-24 w-24 md:h-56 md:w-56 bg-yellow-400 blur-[200px]"></div>
+            <div className="absolute left-0 top-0 h-36 w-36 md:h-56 md:w-56 bg-yellow-400 blur-[200px]"></div>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="absolute right-32 bottom-0 h-20 w-20 md:h-52 md:w-52 bg-yellow-400 blur-[190px] md:blur-[100px]"></div>
+            <div className="absolute right-32 bottom-0 h-36 w-36 md:h-52 md:w-52 bg-yellow-400 blur-[190px] md:blur-[100px]"></div>
             <Img src="/hero.svg" alt="hero" width={1000} height={1000} />
           </motion.div>
         </div>
