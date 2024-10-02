@@ -1,7 +1,8 @@
+"use client";
 import { products } from "@/app/_components/data";
 import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import TitleSubtitle from "@/components/reusables/contents/TitleSubtitle";
 import {
@@ -14,6 +15,12 @@ import {
 import { shuffleArray } from "@/utils/shuffleArray";
 
 const TopSellingProducts = () => {
+  const [shuffledProducts, setShuffledProducts] = useState(products);
+
+  useEffect(() => {
+    // Shuffle the array only on the client side
+    setShuffledProducts(shuffleArray(products));
+  }, []);
   return (
     <Wrapper className="bg-white">
       <Container>
@@ -25,7 +32,7 @@ const TopSellingProducts = () => {
           className="w-full "
         >
           <CarouselContent className="p-4">
-            {shuffleArray(products).map((product) => (
+            {shuffledProducts.map((product) => (
               <CarouselItem
                 key={product.title}
                 className="basis-1/2 md:basis-1/4 lg:basis-1/5"
