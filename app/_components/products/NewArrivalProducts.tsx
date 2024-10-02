@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { shuffleArray } from "@/utils/shuffleArray";
-export const dynamic="force-dynamic"
+export const revalidate = 0;
 const NewArrivalProducts = () => {
   
   return (
