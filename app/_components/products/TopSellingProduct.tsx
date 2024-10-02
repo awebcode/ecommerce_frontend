@@ -11,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { shuffleArray } from "@/utils/shuffleArray";
 
 const TopSellingProducts = () => {
   return (
@@ -24,7 +25,7 @@ const TopSellingProducts = () => {
           className="w-full "
         >
           <CarouselContent className="p-4">
-            {products.slice(5, 10).map((product) => (
+            {shuffleArray(products).map((product) => (
               <CarouselItem
                 key={product.title}
                 className="basis-1/2 md:basis-1/4 lg:basis-1/5"
