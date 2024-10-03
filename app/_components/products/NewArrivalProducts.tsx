@@ -4,6 +4,7 @@ import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
 import React from "react";
 import ProductCard from "./ProductCard";
+
 import TitleSubtitle from "@/components/reusables/contents/TitleSubtitle";
 import {
   Carousel,
@@ -11,13 +12,15 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  useCarousel,
 } from "@/components/ui/carousel";
 import { shuffleArray } from "@/utils/shuffleArray";
 const NewArrivalProducts = () => {
+  const { canScrollNext } = useCarousel();
   const [shuffledProducts, setShuffledProducts] = React.useState(products);
   React.useEffect(() => {
     setShuffledProducts(shuffleArray(products));
-  },[])
+  }, []);
   return (
     <Wrapper className="flex flex-col ">
       <Container>
@@ -30,7 +33,7 @@ const NewArrivalProducts = () => {
           }}
           className="w-full "
         >
-          <CarouselContent className="p-4 md:-mr-56">
+          <CarouselContent className={`p-4 ${canScrollNext?"md:-mr-56":""}`}>
             {shuffledProducts.map((product, index) => (
               <CarouselItem
                 key={product.title}
@@ -41,7 +44,7 @@ const NewArrivalProducts = () => {
                   title={product.title}
                   price={product.price}
                   isLast={index === products.length - 1} // Apply opacity only when the last
-                  isFirst={index === 0} // Apply opacity only when the first
+                  isFirst={index === products.length - 1} // Apply opacity only when the first
                 />
               </CarouselItem>
             ))}

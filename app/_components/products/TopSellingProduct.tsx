@@ -11,9 +11,11 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  useCarousel,
 } from "@/components/ui/carousel";
 import { shuffleArray } from "@/utils/shuffleArray";
 const TopSellingProducts = () => {
+  const { canScrollNext } = useCarousel();
   const [shuffledProducts, setShuffledProducts] = React.useState(products);
 
   React.useEffect(() => {
@@ -31,7 +33,7 @@ const TopSellingProducts = () => {
           }}
           className="w-full"
         >
-          <CarouselContent className="p-4 md:-ml-64">
+          <CarouselContent className={`p-4 ${canScrollNext ? "md:-ml-56" : ""}`}>
             {shuffledProducts.map((product, index) => (
               <CarouselItem
                 key={product.title}

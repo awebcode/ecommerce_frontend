@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { useCarousel } from "@/components/ui/carousel";
-import { Search,  ShoppingCart } from "lucide-react";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import { Search, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -15,7 +16,16 @@ interface ProductCardProps {
   isFirst?: boolean;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, titlePosition="Top", isLast=false, isFirst=false }) => {
+const ProductCard: React.FC<ProductCardProps> = ({
+  image,
+  title,
+  price,
+  desc,
+  titlePosition = "Top",
+  isLast = false,
+  isFirst = false,
+}) => {
+  const isMobile = useMediaQuery("(max-width: 768px)"); // Adjust max-width as needed
   const { canScrollNext, canScrollPrev } = useCarousel();
   // Determine if the item should be disabled (opacity reduced and non-clickable)
   const isDisabled =
@@ -24,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, tit
   return (
     <div
       className={`bg-white border p-1 md:p-2  shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02] ${
-        isDisabled ? "opacity-50 " : ""
+        isDisabled && !isMobile ? "opacity-75 " : ""
       }`}
     >
       {titlePosition === "Top" && (
