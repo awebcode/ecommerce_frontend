@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Search, ShoppingBag, ShoppingCart } from "lucide-react";
+import { Search,  ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -20,12 +20,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, tit
             {title}
           </h3>
           {desc && (
-            <p className="text-gray-500">{desc?.slice(0, 25) + "..."}</p>
+            <p className="text-gray-500">
+              {desc.slice(0, 25)} {desc.length > 25 ? "..." : ""}
+            </p>
           )}
         </div>
       )}
       {/* Product Image */}
-      <div className="w-full  relative group overflow-hidden bg-gray-50 rounded-sm">
+      <div className="w-full  relative group overflow-hidden bg-gray-50 rounded-lg">
         <Image
           src={image}
           alt={title}
@@ -41,7 +43,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, tit
             {title}
           </h3>
           {desc && (
-            <p className="text-gray-500">{desc?.slice(0, 25) + "..."}</p>
+            <p className="text-gray-500">
+              {desc.slice(0, 25)} {desc.length > 25 ? "..." : ""}
+            </p>
           )}
         </div>
       )}

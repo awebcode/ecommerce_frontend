@@ -39,9 +39,15 @@ const NewArrivalProducts = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute right-12 -bottom-12 sm:static">
+          <div className="absolute right-12 -bottom-12 sm:hidden">
             <CarouselPrevious />
             <CarouselNext />
+          </div>
+          <div className="sm:absolute left-24 top-1/2 ">
+            <CarouselPrevious className="ring-2 ring-black hover:ring-primary hover:bg-primary border-none bg-white hover:text-black" />
+          </div>
+          <div className="sm:absolute right-24 top-1/2 ">
+            <CarouselNext className="ring-2 ring-black hover:ring-primary hover:bg-primary border-none bg-white hover:text-black" />
           </div>
         </Carousel>
       </Container>

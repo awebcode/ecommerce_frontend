@@ -18,7 +18,7 @@ const TopSellingProducts = () => {
   return (
     <Wrapper className="bg-white">
       <Container>
-        <TitleSubtitle title="Top Selling Products" subtitle="Here is Our New." />
+        <TitleSubtitle title="Top Selling Products" subtitle="Here is Our New" />
         <Carousel
           opts={{
             align: "center",
@@ -40,9 +40,9 @@ const TopSellingProducts = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute right-12 -bottom-2 sm:static">
-            <CarouselPrevious />
-            <CarouselNext />
+          <div className="hidden sm:block sm:absolute right-12 -bottom-12 ">
+              <CarouselPrevious className="ring-2 ring-black hover:ring-primary hover:bg-primary border-none bg-white hover:text-black" />
+              <CarouselNext className="ring-2 ring-black hover:ring-primary hover:bg-primary border-none bg-white hover:text-black" />
           </div>
         </Carousel>
       </Container>

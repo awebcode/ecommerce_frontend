@@ -10,12 +10,12 @@ import { MoveUpRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <Wrapper className="bg-white dark:bg-black">
+    <Wrapper className="bg-black">
       <Container>
         <div className="flex  flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8 ">
           {/* Hero left (text) */}
           <div className="relative flex-1 text-left space-y-6">
-            <div className="absolute left-0 top-0 h-36 w-36 md:h-56 md:w-56 bg-yellow-400 blur-[200px]"></div>
+            <div className="absolute left-0 top-0 h-52 w-52 md:h-56 md:w-56  bg-yellow-300 md:bg-yellow-400 blur-[200px]"></div>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
-              className="text-5xl lg:text-6xl  text-black dark:text-white"
+              className="text-5xl lg:text-6xl  text-gray-200"
             >
               Air Pods <br /> Max White
             </motion.h1>
@@ -55,18 +55,18 @@ const Hero = () => {
               >
                 Read More{" "}
               </PrimaryButton>
-              <PrimaryButton>BUY</PrimaryButton>
+              <PrimaryButton className="bg-transparent ring-1 ring-primary/50">BUY</PrimaryButton>
             </motion.div>
           </div>
 
-          {/* Hero right (image) */}
+          {/* Herong(image) */}
           <motion.div
             className="flex-1 relative"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="absolute right-32 bottom-0 h-36 w-36 md:h-52 md:w-52 bg-yellow-400 blur-[190px] md:blur-[100px]"></div>
+            <div className="absolute right-32 bottom-0 h-52 w-52 md:h-56 md:w-56  bg-yellow-300 md:bg-yellow-400 blur-[190px] md:blur-[100px]"></div>
             <Img src="/hero.svg" alt="hero" width={1000} height={1000} />
           </motion.div>
         </div>

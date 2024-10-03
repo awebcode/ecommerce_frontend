@@ -7,7 +7,7 @@ const StyledParagrah: React.FC<StyledParagrahProps> = ({content,className, ...pr
   return (
     <p
       className={cn(
-        "text-primary tracking-widest relative after:content-[''] after:absolute after:w-12 after:h-[1px] after:bg-primary after:top-1/2 after:mx-2",
+        "text-primary tracking-widest relative after:content-[''] after:absolute after:w-8 after:h-[1px] after:bg-primary after:top-1/2 after:mx-2",
        className
       )}
       {...props}
