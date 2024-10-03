@@ -43,6 +43,7 @@ const FeatureProducts = () => {
                   price={product.price}
                   titlePosition="Bottom"
                   desc="Lorem ipsum dolor sit amet, consectetur adipiscing."
+                  isFirst={_ === 0}
                 />
               </CarouselItem>
             ))}

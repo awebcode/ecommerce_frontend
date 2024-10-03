@@ -12,7 +12,7 @@ const TitleSubtitle: React.FC<TitleSubtitleProps> = ({ title, subtitle, ...props
       <p className="text-primary font-poppins tracking-widest relative after:content-[''] after:absolute after:w-8 after:h-[1px] after:bg-primary after:top-1/2 after:mx-2">
         {subtitle}
       </p>
-      <h1 className="text-3xl md:text-4xl font-thin text-gray-800 dark:text-white">
+      <h1 className="text-3xl md:text-4xl font-thin text-gray-800 ">
         {title}
       </h1>
     </div>

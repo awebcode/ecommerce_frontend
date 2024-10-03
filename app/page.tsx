@@ -15,12 +15,14 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <NewArrivalProducts />
-      <TopSellingProducts />
-      <AppleProductBanner />
-      <FeatureProducts />
-      <SubscriptionPage />
-      <AccessoriesRepairPage />
+      <div className="bg-gray-50">
+        <NewArrivalProducts />
+        <TopSellingProducts />
+        <AppleProductBanner />
+        <FeatureProducts />
+        <SubscriptionPage />
+        <AccessoriesRepairPage />
+      </div>
     </div>
   );
 };

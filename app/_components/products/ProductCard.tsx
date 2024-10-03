@@ -33,7 +33,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
     (isFirst && !canScrollPrev); // Disable if it's the first item and can't scroll backward
   return (
     <div
-      className={`bg-white border p-1 md:p-2  shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02] ${
+      className={`bg-white border p-1 md:p-2  ${
+        isFirst && "shadow-lg"
+      } rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02] ${
         isDisabled && !isMobile ? "opacity-75 " : ""
       }`}
     >

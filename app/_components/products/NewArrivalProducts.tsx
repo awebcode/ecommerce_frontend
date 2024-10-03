@@ -26,7 +26,7 @@ const NewArrivalProducts = () => {
       <Container>
         <TitleSubtitle title="New Arrival Products" subtitle="Here is Our Top Listed" />
       </Container>
-      <Container className="md:mx-0 md:ml-auto p-2 md:p-0 lg:p-0 ">
+      <Container className="md:mx-0 md:ml-auto p-2 md:p-0 lg:p-0  ">
         <Carousel
           opts={{
             align: "center",
@@ -44,7 +44,7 @@ const NewArrivalProducts = () => {
                   title={product.title}
                   price={product.price}
                   isLast={index === products.length - 1} // Apply opacity only when the last
-                  isFirst={index === products.length - 1} // Apply opacity only when the first
+                  isFirst={index === 0} // Apply opacity only when the first
                 />
               </CarouselItem>
             ))}
