@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import ProgressBar from "@/components/reusables/ProgressBar";
 import ScrollLoader from "@/components/reusables/ScrollLoader";
 import Footer from "./_components/Footer";
+import { Carousel } from "@/components/ui/carousel";
 // In app directory
 // import { ArticleJsonLd, DefaultSeo } from "next-seo";
 
@@ -31,7 +32,7 @@ export default function RootLayout({
       >
         <Navbar />
 
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow"><Carousel>{children}</Carousel></main>
 
         {/* Footer */}
           <Footer />

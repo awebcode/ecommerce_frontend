@@ -1,3 +1,4 @@
+"use client";
 import { products } from "@/app/_components/data";
 import Container from "@/components/reusables/contents/Container";
 import Wrapper from "@/components/reusables/contents/Wrapper";
@@ -12,21 +13,25 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { shuffleArray } from "@/utils/shuffleArray";
-export const revalidate = 0;
 const NewArrivalProducts = () => {
-  
+  const [shuffledProducts, setShuffledProducts] = React.useState(products);
+  React.useEffect(() => {
+    setShuffledProducts(shuffleArray(products));
+  },[])
   return (
-    <Wrapper className="bg-white">
+    <Wrapper className="flex flex-col ">
       <Container>
         <TitleSubtitle title="New Arrival Products" subtitle="Here is Our Top Listed" />
+      </Container>
+      <Container className="md:mx-0 md:ml-auto p-2 md:p-0 lg:p-0 ">
         <Carousel
           opts={{
-            align: "start",
+            align: "center",
           }}
           className="w-full "
         >
-          <CarouselContent className="md:p-4">
-            {shuffleArray(products).map((product) => (
+          <CarouselContent className="p-4 md:-mr-56">
+            {shuffledProducts.map((product, index) => (
               <CarouselItem
                 key={product.title}
                 className="basis-1/2 md:basis-1/4 lg:basis-1/5"
@@ -35,11 +40,13 @@ const NewArrivalProducts = () => {
                   image={product.image}
                   title={product.title}
                   price={product.price}
+                  isLast={index === products.length - 1} // Apply opacity only when the last
+                  isFirst={index === 0} // Apply opacity only when the first
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute right-12 -bottom-12 sm:hidden">
+          <div className="absolute right-12 -bottom-6 sm:hidden">
             <CarouselPrevious />
             <CarouselNext />
           </div>

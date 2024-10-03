@@ -8,7 +8,7 @@ interface TitleSubtitleProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const TitleSubtitle: React.FC<TitleSubtitleProps> = ({ title, subtitle, ...props }) => {
   return (
-    <div className="text-left my-8 p-2" {...props}>
+    <div className="text-left my-2 p-2" {...props}>
       <p className="text-primary font-poppins tracking-widest relative after:content-[''] after:absolute after:w-8 after:h-[1px] after:bg-primary after:top-1/2 after:mx-2">
         {subtitle}
       </p>

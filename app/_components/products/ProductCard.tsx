@@ -1,4 +1,6 @@
+"use client"
 import { Button } from "@/components/ui/button";
+import { useCarousel } from "@/components/ui/carousel";
 import { Search,  ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -9,11 +11,22 @@ interface ProductCardProps {
   price: number;
   desc?: string;
   titlePosition?: "Top" | "Bottom";
+  isLast?: boolean;
+  isFirst?: boolean;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, titlePosition="Top" }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, titlePosition="Top", isLast=false, isFirst=false }) => {
+  const { canScrollNext, canScrollPrev } = useCarousel();
+  // Determine if the item should be disabled (opacity reduced and non-clickable)
+  const isDisabled =
+    (isLast && !canScrollNext) || // Disable if it's the last item and can't scroll forward
+    (isFirst && !canScrollPrev); // Disable if it's the first item and can't scroll backward
   return (
-    <div className="bg-white border p-1 md:p-2  shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+    <div
+      className={`bg-white border p-1 md:p-2  shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02] ${
+        isDisabled ? "opacity-50 " : ""
+      }`}
+    >
       {titlePosition === "Top" && (
         <div className="p-1 md:p-2 ">
           <h3 className="text-sm md:text-lg  capitalize font-semibold text-neutral-600">
@@ -27,7 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price,desc, tit
         </div>
       )}
       {/* Product Image */}
-      <div className="w-full  relative group overflow-hidden bg-gray-50 rounded-lg">
+      <div className={`w-full  relative group overflow-hidden bg-gray-50 rounded-lg`}>
         <Image
           src={image}
           alt={title}
