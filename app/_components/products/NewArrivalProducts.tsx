@@ -25,8 +25,6 @@ const NewArrivalProducts = () => {
     <Wrapper className="flex flex-col ">
       <Container>
         <TitleSubtitle title="New Arrival Products" subtitle="Here is Our Top Listed" />
-      </Container>
-      <Container className="md:mx-0 md:ml-auto p-2 md:p-0 lg:p-0  ">
         <Carousel
           opts={{
             align: "center",

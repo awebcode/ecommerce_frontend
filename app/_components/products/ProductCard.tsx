@@ -41,11 +41,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       {titlePosition === "Top" && (
         <div className="p-1 md:p-2 ">
-          <h3 className="text-sm md:text-lg  capitalize font-semibold text-neutral-600">
+          <h3 className="text-xs md:text-sm  capitalize font-semibold text-gray-700">
             {title}
           </h3>
           {desc && (
-            <p className="text-gray-500">
+            <p className="text-gray-400">
               {desc.slice(0, 25)} {desc.length > 25 ? "..." : ""}
             </p>
           )}
@@ -63,12 +63,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
       </div>
 
       {titlePosition === "Bottom" && (
-        <div className="p-1 md:p-2">
-          <h3 className="text-sm md:text-lg  capitalize font-semibold text-neutral-600">
+        <div className="p-1 md:p-2 ">
+          <h3 className="text-xs md:text-sm  capitalize font-semibold text-gray-700">
             {title}
           </h3>
           {desc && (
-            <p className="text-gray-500">
+            <p className="text-gray-400">
               {desc.slice(0, 25)} {desc.length > 25 ? "..." : ""}
             </p>
           )}

@@ -25,8 +25,6 @@ const TopSellingProducts = () => {
     <Wrapper className="flex flex-col">
       <Container>
         <TitleSubtitle title="Top Selling Products" subtitle="Here is Our New" />
-      </Container>
-      <Container className="  md:mx-0 md:mr-auto p-2 md:p-0 lg:p-0  ">
         <Carousel
           opts={{
             align: "center",
