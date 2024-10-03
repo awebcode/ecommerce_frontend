@@ -22,7 +22,7 @@ const NewArrivalProducts = () => {
     setShuffledProducts(shuffleArray(products));
   }, []);
   return (
-    <Wrapper className="flex flex-col ">
+    <Wrapper className="flex flex-col " id="new-arrival">
       <Container>
         <TitleSubtitle title="New Arrival Products" subtitle="Here is Our Top Listed" />
         <Carousel

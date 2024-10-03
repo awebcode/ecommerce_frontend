@@ -22,7 +22,7 @@ const FeatureProducts = () => {
   }, []);
 
   return (
-    <Wrapper className="bg-white">
+    <Wrapper className="bg-white" id="feature-products">
       <Container>
         <TitleSubtitle title="Feature Products" subtitle="Visit Our New" />
         <Carousel

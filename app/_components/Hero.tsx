@@ -6,12 +6,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import StyledParagrah from "@/components/reusables/contents/StyledParagrah";
 import PrimaryButton from "@/components/reusables/buttons/PrimaryButton";
-import { MoveUpRight } from "lucide-react";
+import {  MoveUpRight } from "lucide-react";
+import GoToArrowDown from "@/components/reusables/contents/GoToArrowDown";
 
 const Hero = () => {
   return (
     <Wrapper className="bg-black">
-      <Container>
+      <Container className="relative">
         <div className="flex  flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8 ">
           {/* Hero left (text) */}
           <div className="relative flex-1 text-left space-y-6">
@@ -21,7 +22,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <StyledParagrah content="Latest air pods" className="capitalize" />
+              <StyledParagrah  content="Latest air pods" className="capitalize" />
             </motion.div>
 
             <motion.h1
@@ -55,7 +56,9 @@ const Hero = () => {
               >
                 Read More{" "}
               </PrimaryButton>
-              <PrimaryButton className="bg-transparent ring-1 ring-primary/50">BUY</PrimaryButton>
+              <PrimaryButton className="bg-transparent ring-1 ring-primary/50">
+                BUY
+              </PrimaryButton>
             </motion.div>
           </div>
 
@@ -70,6 +73,7 @@ const Hero = () => {
             <Img src="/hero.svg" alt="hero" width={1000} height={1000} />
           </motion.div>
         </div>
+        <GoToArrowDown to="feature-products" className="absolute bottom-0 md:bottom-4 left-1/2" />
       </Container>
     </Wrapper>
   );
